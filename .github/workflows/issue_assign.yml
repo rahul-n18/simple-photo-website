@@ -2,7 +2,8 @@ name: Assign
 
 on:
   schedule:
-    - cron: '*/59 * * * *'
+    - cron: '0 0 * * *'
+
   issue_comment:
     types: [created]
 
@@ -20,7 +21,6 @@ jobs:
         with:
 #           required_label: Up-For-Grab
           assigned_label: hacktoberfest-accepted
-          assigned_lsbel: hacktoberfest
           days_until_warning: 2
           days_until_unassign: 1
           stale_assignment_label: Open
